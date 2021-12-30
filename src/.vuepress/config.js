@@ -1,6 +1,6 @@
 module.exports = {
   dest: 'docs',
-  base: '/docuGIT/', 
+  base: '/apuntesGIT/', 
   title: 'Guia sobre GIT',  
   description: 'Guia sobre GIT y GIThub',
   head: [
@@ -22,8 +22,8 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/guia/01-comandos-basicos.md',
-      '/guia/02-Github.md'
+      '/01-comandos-basicos.md',
+      '/02-Github.md'
     ]
   },
 
