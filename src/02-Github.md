@@ -14,6 +14,11 @@ Crear repositorio nuevo desde la web de GitHub y una vez creado volver al proyec
 
 * ``` git push -u origin main (o master depende) ```
 
+
+## Descargar cambios hechos en GitHub
+
+* ``` git fetch -u origin (o master depende) ```
+
 ## Comprobar url del proyecto
 
 * ``` git remote -v ```
