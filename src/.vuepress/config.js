@@ -1,6 +1,6 @@
 module.exports = {
   dest: 'docs',
-  base: '/apuntesGIT/', 
+  base: '/docuGIT/', 
   title: 'Guia sobre GIT',  
   description: 'Guia sobre GIT y GIThub',
   head: [
