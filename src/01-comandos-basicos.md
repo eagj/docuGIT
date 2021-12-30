@@ -4,7 +4,8 @@
 ## Loguearse
 El logueo es simplemente un proceso para ver quien es el que ha hecho cambios. No hay que crear una cuenta previamente, simplemente usar estos dos comandos para poner nuestro nombre y nuestro email. **Este proceso hay que hacerlo en cada ordenador que trabajemos**.
 
-* ``` git config --global user.name "nombredeusuario" ```
+
+
 
 Decimos cual es nuestro nombre de usuario en **esta maquina**.
 
