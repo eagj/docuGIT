@@ -13,3 +13,7 @@ Crear repositorio nuevo desde la web de GitHub y una vez creado volver al proyec
 ## Subir cambios a GitHub
 
 * ``` git push -u origin main (o master depende) ```
+
+## Comprobar url del proyecto
+
+* ``` git remote -v ```

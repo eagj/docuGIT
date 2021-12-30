@@ -5,7 +5,7 @@
 El logueo es simplemente un proceso para ver quien es el que ha hecho cambios. No hay que crear una cuenta previamente, simplemente usar estos dos comandos para poner nuestro nombre y nuestro email. **Este proceso hay que hacerlo en cada ordenador que trabajemos**.
 
 
-
+* ``` git config --global user.name "nombrededeusuario" ```
 
 Decimos cual es nuestro nombre de usuario en **esta maquina**.
 
@@ -33,6 +33,8 @@ Añade TODOS los archivos del proyecto
 
 De este modo subimos todos los cambios realizados y/o que esten añadidos (add). El nombre de la subida es una descripción de lo que se ha hecho para poder acceder o consultar en un futuro.
 
+## Clonar repositorio
+* ``` git clone "https://github.com/nombreproyecto.git" ``` 
 
 * ``` git fetch ```
 
@@ -55,10 +57,6 @@ Sube la rama “nombre_rama” al servidor remoto.
 * ``` git status ```
 
 Muestra el estado actual de la rama, como los cambios que hay sin commitear.
-
-* ``` git add <nombre_archivo> ```
-
-Comienza a trackear el archivo “nombre_archivo”.
 
 * ``` git checkout -b <nombre_rama_nueva> ```
 
