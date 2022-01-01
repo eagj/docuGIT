@@ -43,12 +43,20 @@ De este modo subimos todos los cambios realizados y/o que esten añadidos (add).
 ## Comprobar estado actual de la rama sin commit
 * ``` git status``` 
 
+<<<<<<< HEAD
+=======
+# Ramas
+>>>>>>> b27224453e018903fb0d54f5acf8d0070ca01304
 
 ## Crear rama (branch)
 * ``` git branch -M <nombrederama> ```
 
 ## cambiar de rama
+<<<<<<< HEAD
 * ``` git checkout <nombrederama> ```
+=======
+* ``` git branch <nombrederama> ```
+>>>>>>> b27224453e018903fb0d54f5acf8d0070ca01304
 -----------------------------------------------------------------------------------------------------
 * ``` git fetch ```
 
