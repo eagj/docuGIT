@@ -52,11 +52,7 @@ De este modo subimos todos los cambios realizados y/o que esten añadidos (add).
 * ``` git branch -M <nombrederama> ```
 
 ## cambiar de rama
-<<<<<<< HEAD
 * ``` git checkout <nombrederama> ```
-=======
-* ``` git branch <nombrederama> ```
->>>>>>> b27224453e018903fb0d54f5acf8d0070ca01304
 -----------------------------------------------------------------------------------------------------
 * ``` git fetch ```
 
