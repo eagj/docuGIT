@@ -36,6 +36,20 @@ De este modo subimos todos los cambios realizados y/o que esten añadidos (add).
 ## Clonar repositorio
 * ``` git clone "https://github.com/nombreproyecto.git" ``` 
 
+
+## Revertir cambios
+* ``` git checkout -- <nombre archivo>``` 
+
+## Comprobar estado actual de la rama sin commit
+* ``` git status``` 
+
+
+## Crear rama (branch)
+* ``` git branch -M <nombrederama> ```
+
+## cambiar de rama
+* ``` git checkout <nombrederama> ```
+-----------------------------------------------------------------------------------------------------
 * ``` git fetch ```
 
 Descarga los cambios realizados en el repositorio remoto.
@@ -54,9 +68,6 @@ Unifica los comandos fetch y merge en un único comando.
 
 Sube la rama “nombre_rama” al servidor remoto.
 
-* ``` git status ```
-
-Muestra el estado actual de la rama, como los cambios que hay sin commitear.
 
 * ``` git checkout -b <nombre_rama_nueva> ```
 
