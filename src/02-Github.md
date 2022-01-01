@@ -6,9 +6,6 @@ Crear repositorio nuevo desde la web de GitHub y una vez creado volver al proyec
 
 * ``` git remote add origin git@nombredeproyecto.git ```
 
-## Crear branch
-
-* ``` git branch -M main (o master depende) ```
 
 ## Subir cambios a GitHub
 
