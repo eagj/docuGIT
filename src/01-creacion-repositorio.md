@@ -1,18 +1,37 @@
 
 # 01 Creación de repositorios
 
+## Loguearse
+La primera vez que usamos git en una maquina hemos de loguearnos poniendo un nombre y un email. El logueo es simplemente un proceso para ver quien es el que ha hecho cambios. No hay que crear una cuenta previamente, simplemente usar estos dos comandos para poner nuestro nombre y nuestro email. **Este proceso hay que hacerlo en cada ordenador que trabajemos**.
+
+Para saber si estamos logueados podemos usar los comandos:
+* ```git config user.name ``` y  ```git config user.email ```
+
+![git config user.name y git config user.email](assets/img/username.jpg)
+
+
+Si recibimos datos es que ya estamos logueados, en caso contrario tendremos que usar los comandos de logueo:
+* ``` git config --global user.name "nombrededeusuario" ```
+
+Decimos cual es nuestro nombre de usuario en **esta maquina**.
+
+* ``` git config --global user.email "emaildedeusuario" ```
+
+Decimos cual es nuestro nombre de usuario en **esta maquina**.
+
+
 ## Git init
 El primer paso para la creación de un repositiorio git es mediante el comando:
 * ``` git init ```
 
 Esto creará una carpeta oculta llamada *.git* en la cual se guardará toda la información del proyecto. Este comando solo se ejecutará una vez en nuestro proyecto, ya que una vez usado ya habrá creado esa carpeta *.git* y no habrá que volver a usarlo en ese ordenador para ese proyecto.
 
-Este comando creará dos areas en nuestro proyecto, una de estas areas es la llamada **Staging area** o area de ensayo y el otro area es el **repositorio local** (**repository**). Aunque todo esto se hará de manera transparente a nosotros, ya que nosotros seguiremos trabajando en nuestro **directorio de trabajo** (**working directory**).
+Este comando creará dos areas en nuestro proyecto, una de estas areas es la llamada **Staging area** o area de ensayo y el otro area es el **repository local**. Aunque todo esto se hará de manera transparente a nosotros, ya que nosotros seguiremos trabajando en nuestro **directorio de trabajo** (**working directory**).
 
 
-El **staging area** es el area donde hacemos un seguimiento de los archivos hayamos seleccionado (**add**). Este area del **repositorio local** o **staging area** es el lugar donde se han mandado todos los cambios (**commit**).
+El **staging area** es el area donde hacemos un seguimiento de los archivos hayamos seleccionado (**add**). Este area del **repository local** o **staging area** es el lugar donde se han mandado todos los cambios (**commit**).
 
-En resumidas cuentas nosotros trabajamos en nuestro **working directory** y cuando hacemos cambios podemos pasar esos archivos a nuestro **staging area** y una vez hechas todas las modificaciones pasar todos esos cambios a nuestro **repository** el cual creará un punto de versión al que podremos acceder en cualquier momento para revisarlo.
+En resumidas cuentas nosotros trabajamos en nuestro **working directory** y cuando hacemos cambios podemos pasar esos archivos a nuestro **staging area** y una vez hechas todas las modificaciones pasar todos esos cambios a nuestro **repository local** el cual creará un punto de versión al que podremos acceder en cualquier momento para revisarlo.
 
 ![Areas de trabajo](assets/img/areas-trabajo-init.png)
 
@@ -45,30 +64,21 @@ En el momento que añadimos todo al staging area (``` git add . ```) veremos com
 
 ![Git tatus -s](assets/img/status-add.jpg)
 
-En este pantallazo vemos como se han añadido (**A**), modificados (**M**) o renombrados (**R**).
+En este pantallazo vemos como se han añadido (**A**), modificados (**M**).
 
 ## Git commit
-Para pasar nuestra **staging area** a nuestro **repository** hemos de usar:
+Para pasar nuestra **staging area** a nuestro **repository local** hemos de usar:
 * ``` git commit -m "nombre descriptivo de la subida" ```
 
 ![Git tatus -s](assets/img/commit.jpg)
 
 
-## Loguearse
-El logueo es simplemente un proceso para ver quien es el que ha hecho cambios. No hay que crear una cuenta previamente, simplemente usar estos dos comandos para poner nuestro nombre y nuestro email. **Este proceso hay que hacerlo en cada ordenador que trabajemos**.
+## Git log
+Cada vez que hacemos un commit, este se guarda como un punto de creación dentro del **repository local**, el comando para ver todos los commit es:
+* ``` git log --oneline ```
 
-
-* ``` git config --global user.name "nombrededeusuario" ```
-
-Decimos cual es nuestro nombre de usuario en **esta maquina**.
-
-* ``` git config --global user.email "emaildedeusuario" ```
-
-Decimos cual es nuestro nombre de usuario en **esta maquina**.
-
-
-
-
+De este modo veremos un listado de todas nuestras copias en la cual veremos el id, la ramificación y la descripión del commit.
+![Git tatus -s](assets/img/log.jpg)
 
 ## Clonar repositorio
 * ``` git clone "https://github.com/nombreproyecto.git" ``` 
