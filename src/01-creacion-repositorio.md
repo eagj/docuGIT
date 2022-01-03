@@ -14,7 +14,7 @@ El **staging area** es el area donde hacemos un seguimiento de los archivos haya
 
 En resumidas cuentas nosotros trabajamos en nuestro **working directory** y cuando hacemos cambios podemos pasar esos archivos a nuestro **staging area** y una vez hechas todas las modificaciones pasar todos esos cambios a nuestro **repository** el cual creará un punto de versión al que podremos acceder en cualquier momento para revisarlo.
 
-![Areas de trabajo](/img/areas-trabajo-init.png)
+![Areas de trabajo](img/areas-trabajo-init.png)
 
 ## Git add
 Mientras trabajamos en nuestra carpeta local y una vez que hemos modificado, borrado, o creado archivos tenemos que decirle a git que pase esos archivos al staging area y eso se consigue con:
