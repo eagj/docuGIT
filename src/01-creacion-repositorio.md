@@ -31,19 +31,19 @@ una vez tengamos todos nuestros archivos en nuestra stagging area, para pasarlos
 
 De este modo hemos creado una "*instantanea*" o respaldo de nuestro trabajo hasta ese momento y nuestro stagin area quedará vacio ya que todo se ha pasado al repositorio local. De este modo acabamos de crear un punto de respaldo, al que podremos acceder más adelante mediante un ID que se le ha asignado. Cada commit no machaca el anterior, simplemente crea nuevos puntos cada uno con su propio ID.
 
-![Areas de trabajo](/img/areas-trabajo-init.png)
+![Areas de trabajo](assets/img/areas-trabajo-init.png)
 
 ## Git status
 Según vamos trabajando y creando archivos llegará un punto en el que no sabremos que archivos tenemos en nuestro **staging area** y para eso hemos de usar el comando:
 * ``` git status -s ```
 
-![Git tatus -s](/img/status.jpg)
+![Git tatus -s](assets/img/status.jpg)
 
 De este modo veremos que archivos hemos modificado (**M**), borrado (**D**) o sin seguimiento (**??**).
 
 En el momento que añadimos todo al staging area (``` git add . ```) veremos como los *flags* han cambiado y nos avisa de que ya estan añadidos.
 
-![Git tatus -s](/img/status-add.jpg)
+![Git tatus -s](assets/img/status-add.jpg)
 
 En este pantallazo vemos como se han añadido (**A**), modificados (**M**) o renombrados (**R**).
 
@@ -51,7 +51,7 @@ En este pantallazo vemos como se han añadido (**A**), modificados (**M**) o ren
 Para pasar nuestra **staging area** a nuestro **repository** hemos de usar:
 * ``` git commit -m "nombre descriptivo de la subida" ```
 
-![Git tatus -s](/img/commit.jpg)
+![Git tatus -s](assets/img/commit.jpg)
 
 
 ## Loguearse
