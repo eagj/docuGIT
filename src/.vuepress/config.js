@@ -22,7 +22,8 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/01-comandos-basicos.md',
+      '/01-creacion-repositorio.md',
+      '/comandos-basicos.md',
       '/02-Github.md'
     ]
   },
