@@ -41,8 +41,17 @@ Según vamos trabajando y creando archivos llegará un punto en el que no sabrem
 
 De este modo veremos que archivos hemos modificado (**M**), borrado (**D**) o sin seguimiento (**??**).
 
-En el momento que añadimos todo al staging area:
-* ``` git add . ```
+En el momento que añadimos todo al staging area (``` git add . ```) veremos como los *flags* han cambiado y nos avisa de que ya estan añadidos.
+
+![Git tatus -s](/img/status-add.jpg)
+
+En este pantallazo vemos como se han añadido (**A**), modificados (**M**) o renombrados (**R**).
+
+## Git commit
+Para pasar nuestra **staging area** a nuestro **repository** hemos de usar:
+* ``` git commit -m "nombre descriptivo de la subida" ```
+
+![Git tatus -s](/img/commit.jpg)
 
 
 ## Loguearse
