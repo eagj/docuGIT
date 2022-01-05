@@ -60,3 +60,6 @@ Para que los cambios hechos en una rama se pasen a la rama se usa el comando **m
 
 **Lo primero que debemos hacer es movernos a la rama master** ```git checkout master``` y una vez en ella es cuando usaremos el comando **merge**:
 * ```git merge creacion_ramas```
+
+Si ahora hacemos un ```git log --oneline``` (desde master) veremos que se han pasado los cambios realizados en la rama *creacion_ramas* a la rama *master*. El último commit realizado en *creacion_ramas* se llamaba *antes del merge* y como vemos ya aparece en el log de la rama *master* una vez realizado el **merge**.
+![commit enrama creacion_ramas](assets/img/rama-merge.jpg)
