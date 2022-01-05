@@ -66,3 +66,5 @@ Si ahora hacemos un ```git log --oneline``` (desde master) veremos que se han pa
 
 ## Resolver conflictos en merge
 Puede darse el caso de que estemos trabajando en la rama *creacion_ramas* y modifiquemos un archivo y a la vez alguien en la rama *master* esté tambien modificando ese mismo archivo. Al hacer un merge eso crearía un conflicto ya que el archivo es distinto en dos sitios distintos.
+
+Texto creado en creacion_ramas
