@@ -50,7 +50,7 @@ Si ahora hacemos un ```git branch ``` veremos que ya estamos en la rama *creacio
 Si hacemos un commit de los cambios en la rama *creacion_ramas* ```git git commit -m "creacion rama creacion_ramas y añadidos el 02-Ramas o branches.md y sus graficos" ``` y un log ```git log --oneline``` veremos que se ha ha hecho commit en esa rama:
 ![commit enrama creacion_ramas](assets/img/rama-log-commit-ramanueva.jpg)
 
-Pero si cambiamos a la rama *master* y hacemos un ```git log --oneline``` veremos que solo muestra los commit hechos en esta rama y no estan los cambios hechos en la rama *creacion_ramas*:
+Pero si cambiamos a la rama *master* ```git checkout master``` y hacemos un ```git log --oneline``` veremos que solo muestra los commit hechos en esta rama y no estan los cambios hechos en la rama *creacion_ramas*:
 ![commit enrama creacion_ramas](assets/img/rama-log-rama-master.jpg)
 
 Hay que tener en cuenta que todos los cambios hechos en la rama *creacion_ramas* no aparecerán en la rama master, ya que de momento no se han fusionado (**merge**).
@@ -63,3 +63,6 @@ Para que los cambios hechos en una rama se pasen a la rama se usa el comando **m
 
 Si ahora hacemos un ```git log --oneline``` (desde master) veremos que se han pasado los cambios realizados en la rama *creacion_ramas* a la rama *master*. El último commit realizado en *creacion_ramas* se llamaba *antes del merge* y como vemos ya aparece en el log de la rama *master* una vez realizado el **merge**.
 ![commit enrama creacion_ramas](assets/img/rama-merge.jpg)
+
+## Resolver conflictos en merge
+Puede darse el caso de que estemos trabajando en la rama *creacion_ramas*y modifiquemos un archivo y a la vez alguien en la rama *master* esté tambien modificando ese mismo archivo. Al hacer un merge eso crearía un conflicto ya que el archivo es distinto en dos sitios distintos.
