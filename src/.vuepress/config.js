@@ -23,6 +23,7 @@ module.exports = {
     sidebar: [
       '/',
       '/01-creacion-repositorio.md',
+      '/02-Ramas o branches.md',
       '/comandos-basicos.md',
       '/02-Github.md'
     ]
