@@ -16,11 +16,4 @@ La gran ventaja de Git frente a otros controles de versiones es que cada ordenad
 <center><img src="https://dc722jrlp2zu8.cloudfront.net/media/cache/67/3a/673a2e3d3ec459f668211dc744d75848.webp"></center>
 
 Las posibilidades de crear ramas (**branch**) permite a cada miembro del equipo en trabajar en su parte sin interferir en el trabajo de los demas y una vez finalizado poder "*fusionar*" (**merge**) todo a la rama principal(**main**)
-<img src="https://github.com/eagj/docuGIT/blob/master/src/.vuepress/public/assets/img/ramas-ejemplos.jpeg?raw=true">
-
-## Qué es GitHub
-<center><img src="https://icones.pro/wp-content/uploads/2021/06/icone-github-noir.png" width="300"></center>
-<br/>
-&nbsp;
-GutHub es un servidor Git pero en la nube.
-
+<img src="https://github.com/eagj/docuGIT/blob/master/src/.vuepress/public/assets/img/ramas-ejemplos_merge.jpeg?raw=true">
