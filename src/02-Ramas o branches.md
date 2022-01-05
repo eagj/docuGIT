@@ -64,6 +64,12 @@ Para que los cambios hechos en una rama se pasen a la rama se usa el comando **m
 Si ahora hacemos un ```git log --oneline``` (desde master) veremos que se han pasado los cambios realizados en la rama *creacion_ramas* a la rama *master*. El último commit realizado en *creacion_ramas* se llamaba *antes del merge* y como vemos ya aparece en el log de la rama *master* una vez realizado el **merge**.
 ![commit enrama creacion_ramas](assets/img/rama-merge.jpg)
 
+## Borrar ramas
+Una vez realizado el merge de las ramas en master, puede que ya no vayamos a usar más esa rama y querramos borrarla para evitar posibles confictos en un futuro. Para borrar una rama hemos de escribir:
+
+* ```git branch -d nombrederama ```
+
+
 ## Resolver conflictos en merge
 Puede darse el caso de que estemos trabajando en la rama *creacion_ramas* y modifiquemos un archivo y a la vez alguien en la rama *master* esté tambien modificando ese mismo archivo. Al hacer un merge eso crearía un conflicto ya que el archivo es distinto en dos sitios distintos.
 
