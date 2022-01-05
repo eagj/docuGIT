@@ -47,4 +47,16 @@ Si ahora hacemos un ```git branch ``` veremos que ya estamos en la rama *creacio
 
 ![Cambio a rama creacion_ramas](assets/img/rama-cambio-rama.jpg)
 
-Si hacemos cambios en esta rama y volvemos a la rama *master* ```git checkout master ```, hay que tener en cuenta que todos los cambios hechos en la rama *creacion_ramas* no aparecerán en la rama master, ya que de momento no se han fusionado (**merge**).
+Si hacemos un commit de los cambios en la rama *creacion_ramas* ```git git commit -m "creacion rama creacion_ramas y añadidos el 02-Ramas o branches.md y sus graficos" ``` y un log ```git log --oneline``` veremos que se ha ha hecho commit en esa rama:
+![commit enrama creacion_ramas](assets/img/rama-log-commit-ramanueva.jpg)
+
+Pero si cambiamos a la rama *master* y hacemos un ```git log --oneline``` veremos que solo muestra los commit hechos en esta rama y no estan los cambios hechos en la rama *creacion_ramas*:
+![commit enrama creacion_ramas](assets/img/rama-log-rama-master.jpg)
+
+Hay que tener en cuenta que todos los cambios hechos en la rama *creacion_ramas* no aparecerán en la rama master, ya que de momento no se han fusionado (**merge**).
+
+## Fusionar ramas (merge)
+Para que los cambios hechos en una rama se pasen a la rama se usa el comando **merge**.  
+
+**Lo primero que debemos hacer es movernos a la rama master** ```git checkout master``` y una vez en ella es cuando usaremos el comando **merge**:
+* ```git merge creacion_ramas```
