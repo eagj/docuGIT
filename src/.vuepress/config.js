@@ -20,12 +20,12 @@ module.exports = {
     nav: [
       
     ],
-    sidebar: [
-      '/',
-      '/01-creacion-repositorio.md',
-      '/02-Ramas o branches.md',
+    sidebar: [      
+      '/creacion-repositorio.md',
+      '/Ramas o branches.md',
+      '/Github.md',
       '/comandos-basicos.md',
-      '/02-Github.md'
+      
     ]
   },
 

@@ -1,5 +1,5 @@
 
-# 02 Ramas o Branches
+# Ramas o Branches
 
 ## Qué son las ramas
 Las ramas (**branches**) son como *lineas temporales* por la cuales podemos movernos a *lineas alternativas* para trabajar.
