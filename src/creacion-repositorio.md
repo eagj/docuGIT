@@ -89,10 +89,20 @@ La diferencia entre uno y otro es que *--mixed* (o no poner nada, ya que es la o
 
 La opción *--hard* nos dejaría nuestro proyecto como estaba en ese momento, es decir si en ese commit teniamos 3 archivos y antes de hacer el reset teniamos 1003, **perderiamos esos 1000**.
 
-<p style="color:#fff;background-color:red;font-weight:bold; padding:20px;">IMPORTANTE: USAR GIT RESET BORRA TODOS LOS COMMITS POSTERIORES QUE SE HAYAN HECHO DESPUES DEL QUE HEMOS VUELTO</p>
-
 ## Rehacer commit reset
 Existe un comando para volver hacia adelante cuando hemos hecho un *reset* y es mediante el comando:
 * ```git reflog ```
 
-Obviamente, usar con cuidado el *reset --hard*, aunque podamos volver a un commit posterior... Puede dar problemas.
+Obviamente, usar con cuidado el *reset --hard*, aunque podamos volver a un commit posterior... Puede dar problemas. Por ejemplo si creamos un repositorio en **github** y lo asociamos a nuestro proyecto. Una vez sincronizados hacemos un reset a un estado anterior al hacer una subida a github (**push**) nos dará un conflicto y no nos dejará hacerlo ya que al haber vuelto a un punto anterior y haber hecho cambios, el repositorio en github está en una versión más adelantada.
+
+<p style="color: rgb(255, 255, 255); background-color: red; font-weight: bold; padding: 20px;">IMPORTANTE: USAR GIT RESET BORRA TODOS LOS COMMITS POSTERIORES QUE SE HAYAN HECHO DESPUES DEL QUE HEMOS VUELTO</p>
+
+Una manera de "*fusionar*" github con nuestro repositorio es mendiante:
+* ```git pull origin main ```
+
+Esto hara un *merge* de los dos contenidos mezclando todo.
+
+
+
+
+
