@@ -1,5 +1,5 @@
 
-# Creación de repositorios
+# Creación de repositorios y comandos básicos
 
 ## Loguearse
 La primera vez que usamos git en una maquina hemos de loguearnos poniendo un nombre y un email. El logueo es simplemente un proceso para ver quien es el que ha hecho cambios. No hay que crear una cuenta previamente, simplemente usar estos dos comandos para poner nuestro nombre y nuestro email. **Este proceso hay que hacerlo en cada ordenador que trabajemos**.
@@ -20,8 +20,8 @@ Decimos cual es nuestro nombre de usuario en **esta maquina**.
 Decimos cual es nuestro nombre de usuario en **esta maquina**.
 
 
-## Git init
-El primer paso para la creación de un repositiorio git es mediante el comando:
+## Inicilizar repositorio
+El primer paso para la creación de un repositiorio **git** es inicializarlo mediante el comando:
 * ``` git init ```
 
 Esto creará una carpeta oculta llamada *.git* en la cual se guardará toda la información del proyecto. Este comando solo se ejecutará una vez en nuestro proyecto, ya que una vez usado ya habrá creado esa carpeta *.git* y no habrá que volver a usarlo en ese ordenador para ese proyecto.
@@ -35,8 +35,8 @@ En resumidas cuentas nosotros trabajamos en nuestro **working directory** y cuan
 
 ![Areas de trabajo](assets/img/areas-trabajo-init.png)
 
-## Git add
-Mientras trabajamos en nuestra carpeta local y una vez que hemos modificado, borrado, o creado archivos tenemos que decirle a git que pase esos archivos al staging area y eso se consigue con:
+## Añadir archivos
+Mientras trabajamos en nuestra **carpeta local** y una vez que hemos modificado, borrado, o creado archivos tenemos que decirle a git que pase esos archivos al **staging area** y eso se consigue con:
 * ``` git add <nombre_archivo> ```
 
 Una vez ejecutado este comando, git hace un seguimiento de este archivo (y no de los que no se hayan añadido) ya que se encuentra en el staging area. Todo este proceso lo hace de manera transparente a nosotros, ya que nosotros seguimos viendo nuestra carpeta local, pero internamente ese archivo, al estar en el staging area, estará continuamente siendo revisado en cada cambio que hagamos.
@@ -44,15 +44,19 @@ Una vez ejecutado este comando, git hace un seguimiento de este archivo (y no de
 Si por otro lado hemos modificado/creado/borrado muchos archivos, en vez de ir haciendo *add* de cada uno, podemos pasar todos al staging area con:
 * ``` git add . ```
 
-## Git commit
-una vez tengamos todos nuestros archivos en nuestra stagging area, para pasarlos a nuestro repositorio local hay que ejecutar el comando:
+## Enviar a repositorio
+una vez tengamos todos nuestros archivos en nuestra **stagging area**, podemos pasarlos a nuestro repositorio local y crear un punto de respaldo.
+
+Para pasar nuestra **staging area** a nuestro **repository local** hemos de usar:
 * ``` git commit -m "nombre descriptivo de la subida" ```
 
-De este modo hemos creado una "*instantanea*" o respaldo de nuestro trabajo hasta ese momento y nuestro stagin area quedará vacio ya que todo se ha pasado al repositorio local. De este modo acabamos de crear un punto de respaldo, al que podremos acceder más adelante mediante un ID que se le ha asignado. Cada commit no machaca el anterior, simplemente crea nuevos puntos cada uno con su propio ID.
+![Git status -s](assets/img/commit.jpg)
+
+De este modo hemos creamos una *instantanea* o punto de respaldo de nuestro trabajo hasta ese momento y nuestro **staging area** quedará vacio ya que todo se ha pasado al repositorio local. De este modo acabamos de crear un punto de respaldo, al que podremos acceder más adelante mediante un ID que se le ha asignado. Cada commit no machaca el anterior, simplemente crea nuevos puntos cada uno con su propio ID.
 
 ![Areas de trabajo](assets/img/areas-trabajo-init.png)
 
-## Git status
+## Comprobar estado
 Según vamos trabajando y creando archivos llegará un punto en el que no sabremos que archivos tenemos en nuestro **staging area** y para eso hemos de usar el comando:
 * ``` git status -s ```
 
@@ -66,23 +70,29 @@ En el momento que añadimos todo al staging area (``` git add . ```) veremos com
 
 En este pantallazo vemos como se han añadido (**A**), modificados (**M**).
 
-## Git commit
-Para pasar nuestra **staging area** a nuestro **repository local** hemos de usar:
-* ``` git commit -m "nombre descriptivo de la subida" ```
-
-![Git tatus -s](assets/img/commit.jpg)
-
-
-## Git log
+## Log de commits
 Cada vez que hacemos un commit, este se guarda como un punto de creación dentro del **repository local**, el comando para ver todos los commit es:
 * ``` git log --oneline ```
 
 De este modo veremos un listado de todas nuestras copias en la cual veremos el id, la ramificación y la descripión del commit.
 ![Git tatus -s](assets/img/log.jpg)
 
-## Git reset
-Este comando nos vuelve a un punto anterior del repositorio
 
-* ``` git reset --hard ID ```
+## Volver a un commit anterior
+Si por alguna razón deseamos volver a un punto de respaldo anterior podemos usar el comando *reset*. Dependiendo del flag que usemos este será mas "**soft**" o más "**hard**".
+
+En cualquiera de los dos casos hemos de usar la opción *reset*:
+
+* ``` git reset --mixed ID ``` o ``` git reset --hard ID ```
+
+La diferencia entre uno y otro es que *--mixed* (o no poner nada, ya que es la opción por defecto) nos vuelve a un punto anterior, pero nos mantiene todos los archivos que tengamos en nuestro working directory, pero sin seguimiento. Es decir borraróa los commit posteriores pero nos mantendría (sin seguimiento) los archivos que tengamos en nuestro proyecto.
+
+La opción *--hard* nos dejaría nuestro proyecto como estaba en ese momento, es decir si en ese commit teniamos 3 archivos y antes de hacer el reset teniamos 1003, **perderiamos esos 1000**.
 
 <p style="color:#fff;background-color:red;font-weight:bold; padding:20px;">IMPORTANTE: USAR GIT RESET BORRA TODOS LOS COMMITS POSTERIORES QUE SE HAYAN HECHO DESPUES DEL QUE HEMOS VUELTO</p>
+
+## Rehacer commit reset
+Existe un comando para volver hacia adelante cuando hemos hecho un *reset* y es mediante el comando:
+* ```git reflog ```
+
+Obviamente, usar con cuidado el *reset --hard*, aunque podamos volver a un commit posterior... Puede dar problemas.
