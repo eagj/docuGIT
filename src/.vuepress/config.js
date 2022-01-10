@@ -22,7 +22,7 @@ module.exports = {
     ],
     sidebar: [      
       '/creacion-repositorio.md',
-      '/Ramas o branches.md',
+      '/ramas-branches.md',
       '/Github.md',
       '/comandos-basicos.md',
       
