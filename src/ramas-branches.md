@@ -59,7 +59,7 @@ Hay que tener en cuenta que todos los cambios hechos en la rama *creacion_ramas*
 Para que los cambios hechos en una rama se pasen a la rama se usa el comando **merge**.  
 
 **Lo primero que debemos hacer es movernos a la rama master** ```git checkout master``` y una vez en ella es cuando usaremos el comando **merge**:
-* ```git merge creacion_ramas```
+* ```git merge creacion_ramas```    
 
 Si ahora hacemos un ```git log --oneline``` (desde master) veremos que se han pasado los cambios realizados en la rama *creacion_ramas* a la rama *master*. El último commit realizado en *creacion_ramas* se llamaba *antes del merge* y como vemos ya aparece en el log de la rama *master* una vez realizado el **merge**.
 ![commit enrama creacion_ramas](assets/img/rama-merge.jpg)
@@ -69,9 +69,19 @@ Una vez realizado el merge de las ramas en master, puede que ya no vayamos a usa
 
 * ```git branch -d nombrederama ```
 
+Como ya no necesitamos la rama *creacion_ramas* la vamos eliminar con ```git branch -d creacion_ramas ```. Si ahora hacemos un ```git branch```veremos que ya solo tenemos la rama **master**
+![eliminación rama](assets/img/rama_borrado-rama.jpg)
+
+## Cambiar nombre ramas
+Si por el motivo que fuese necesitamos cambiar el nombre de una rama podemos hacerlo con:
+* ```git branch -m nombrerama nombrenuevo ```
+
+Por ejemplo, en la actualidad todo lo que lleva la palabra *master* está mal visto por tema de esclavismo y racismo. Por ese motivo **Github** cambió el nombre de la rama principal llamada **master** por la rama **main**. Por lo que vamos a cambiar el nombre de esta rama **master** a **main**.
+* ```git branch -m master main ```
+![cambio de nombre de rama](assets/img/rama-cambionombre.jpg)
+
 
 ## Resolver conflictos en merge
 Puede darse el caso de que estemos trabajando en la rama *creacion_ramas* y modifiquemos un archivo y a la vez alguien en la rama *master* esté tambien modificando ese mismo archivo. Al hacer un merge eso crearía un conflicto ya que el archivo es distinto en dos sitios distintos.
 
 En este ejemplo he modificado un archivo desde la rama *creacion_ramas* y he hecho **commit** desde esa rama. He hecho un **checkout** a *master* y una vez en *master* he modificado ese mismo archivo e intentado hacer un **merge** de *creacion_ramas*. Debido a que los cambios en ambos ramas de ese mismo archivo son distintos Git da un error de conflicto
-s
