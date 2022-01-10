@@ -78,6 +78,7 @@ Si por el motivo que fuese necesitamos cambiar el nombre de una rama podemos hac
 
 Por ejemplo, en la actualidad todo lo que lleva la palabra *master* está mal visto por tema de esclavismo y racismo. Por ese motivo **Github** cambió el nombre de la rama principal llamada **master** por la rama **main**. Por lo que vamos a cambiar el nombre de esta rama **master** a **main**.
 * ```git branch -m master main ```
+
 ![cambio de nombre de rama](assets/img/rama-cambionombre.jpg)
 
 ## Resolver conflictos en merge
