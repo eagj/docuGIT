@@ -85,7 +85,7 @@ En cualquiera de los dos casos hemos de usar la opción *reset*:
 
 * ``` git reset --mixed ID ``` o ``` git reset --hard ID ```
 
-La diferencia entre uno y otro es que *--mixed* (o no poner nada, ya que es la opción por defecto) nos vuelve a un punto anterior, pero nos mantiene todos los archivos que tengamos en nuestro working directory, pero sin seguimiento. Es decir borraróa los commit posteriores pero nos mantendría (sin seguimiento) los archivos que tengamos en nuestro proyecto.
+La diferencia entre uno y otro es que *--mixed* (*o no poner nada, ya que es la opción por defecto*) nos vuelve a un punto anterior, pero nos mantiene todos los archivos que tengamos en nuestro **working directory**, pero sin seguimiento. Es decir borraría los commit posteriores pero nos mantendría (sin seguimiento) los archivos que tengamos en nuestro proyecto.
 
 La opción *--hard* nos dejaría nuestro proyecto como estaba en ese momento, es decir si en ese commit teniamos 3 archivos y antes de hacer el reset teniamos 1003, **perderiamos esos 1000**.
 
