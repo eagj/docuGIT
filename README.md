@@ -14,9 +14,9 @@ Git es un control de versiones con el cual generamos copias (**commit**) de los 
 
 La gran ventaja de Git frente a otros controles de versiones es que cada ordenador funciona como servidor, por lo que si falla el servidor central o cualquier ordenador, tendremos una copia total del proyecto en nuestro ordenador.
 
-<img src="https://github.com/eagj/docuGIT/blob/master/src/.vuepress/public/assets/img/gitvssvn.jpeg?raw=true">
+<img src="https://raw.githubusercontent.com/eagj/docuGIT/main/src/.vuepress/public/assets/img/gitvssvn.jpeg>
 
 
 Las posibilidades de crear ramas (**branch**) permite a cada miembro del equipo en trabajar en su parte sin interferir en el trabajo de los demas y una vez finalizado poder "*fusionar*" (**merge**) todo a la rama principal(**main**)
 
-<img src="https://github.com/eagj/docuGIT/blob/master/src/.vuepress/public/assets/img/ramas-ejemplos_merge.jpeg?raw=true">
+<img src="https://raw.githubusercontent.com/eagj/docuGIT/main/src/.vuepress/public/assets/img/ramas-ejemplos_merge.jpeg">
