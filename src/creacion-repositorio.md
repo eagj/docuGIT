@@ -93,15 +93,20 @@ La opción *--hard* nos dejaría nuestro proyecto como estaba en ese momento, es
 Existe un comando para volver hacia adelante cuando hemos hecho un *reset* y es mediante el comando:
 * ```git reflog ```
 
-Obviamente, usar con cuidado el *reset --hard*, aunque podamos volver a un commit posterior... Puede dar problemas. Por ejemplo si creamos un repositorio en **github** y lo asociamos a nuestro proyecto. Una vez sincronizados hacemos un reset a un estado anterior al hacer una subida a github (**push**) nos dará un conflicto y no nos dejará hacerlo ya que al haber vuelto a un punto anterior y haber hecho cambios, el repositorio en github está en una versión más adelantada.
+Obviamente, usar con cuidado el *reset --hard*, aunque podamos volver a un commit posterior... Puede dar problemas. Por ejemplo si creamos un repositorio en **github** y lo asociamos a nuestro proyecto. Una vez sincronizados hacemos un **reset** a un estado anterior al hacer una subida a github (**push**) nos dará un conflicto y no nos dejará hacerlo ya que al haber vuelto a un punto anterior y haber hecho cambios, el repositorio en github está en una versión más adelantada.
 
 <p style="color: rgb(255, 255, 255); background-color: red; font-weight: bold; padding: 20px;">IMPORTANTE: USAR GIT RESET BORRA TODOS LOS COMMITS POSTERIORES QUE SE HAYAN HECHO DESPUES DEL QUE HEMOS VUELTO</p>
 
 Una manera de "*fusionar*" github con nuestro repositorio es mendiante:
 * ```git pull origin main ```
 
-Esto hara un *merge* de los dos contenidos mezclando todo.
+Esto hará un *merge* de los dos contenidos mezclando todo.
 
+## Borrar commit
+Podemos borrar un **commit** anterior mediante el comando **revert** Esto lo que hará es restaurar los archivos que había en ese **commit** y crear uno nuevo al final con ese cambio, pero no borra el commit al que hemos hecho **revert**:
+* ```git revert idcommit ```
+
+Si hacemos un ```git log --oneline``` veremos que se ha hecho un nuevo **commit** de ese **revert** y mantiene el **commit** del punto del que hemos hecho **revert**. Es decir nos deja el proyecto como estaba en ese momento, hace un **commit** nuevo y no borra el **commit** al que hemos hecho **revert**, cosa que si haría el comando **reset** el cual **si borra el punto de ese commit**.
 
 
 
