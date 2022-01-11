@@ -9,7 +9,8 @@ Git (pronunciado «guit»/gɪt) es un software de control de versiones diseñado
 
 Git es un control de versiones con el cual generamos copias (**commit**) de los avances de un proyecto pudiendo regresar un punto anterior (**checkout**, **merge**, **reset**) gracias los numeros **ID** que asigna en cada copia (**log**) Una vez realizados los cambios podemos subirlos a un servidor remoto (**push**) o traerlos de este (**pull**).
 
-<img src="https://github.com/eagj/docuGIT/blob/master/src/.vuepress/public/assets/img/esquemaGit.jpeg?raw=true">
+<img src="https://raw.githubusercontent.com/eagj/docuGIT/main/src/.vuepress/public/assets/img/esquemaGit.jpeg">
+
 
 La gran ventaja de Git frente a otros controles de versiones es que cada ordenador funciona como servidor, por lo que si falla el servidor central o cualquier ordenador, tendremos una copia total del proyecto en nuestro ordenador.
 
