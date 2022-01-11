@@ -109,6 +109,10 @@ Podemos borrar un **commit** anterior mediante el comando **revert**. Esto lo qu
 
 Si hacemos un ```git log --oneline``` veremos que se ha hecho un nuevo **commit** de ese **revert** y mantiene el **commit** del punto del que hemos hecho **revert**. Es decir nos deja el proyecto como estaba en ese momento, hace un **commit** nuevo y no borra el **commit** al que hemos hecho **revert**, cosa que si haría el comando **reset** el cual **si borra el punto de ese commit**.
 
+## Cambiar nombre a commit
+puede que por error hayamos puesto mal la descripción del commit y querramos cambiarla. **Esto se puede hacer siempre que no se haya hecho un push al repositorio**
 
+* ``` git commit --amend ```
 
-
+Nos abrirá nuestro editor de código por defecto (vim, nano, etc) Con el nombre que le habiamos dado, solo es cambiar ese texto de la descrioción.
+![cambio nombre commit](assets/img/cambio-nombre-commit.jpg)
