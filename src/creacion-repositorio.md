@@ -20,7 +20,7 @@ Decimos cual es nuestro nombre de usuario en **esta maquina**.
 Decimos cual es nuestro nombre de usuario en **esta maquina**.
 
 
-## Inicilizar repositorio
+## Inicializar repositorio
 El primer paso para la creación de un repositiorio **git** es inicializarlo mediante el comando:
 * ``` git init ```
 
